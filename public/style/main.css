@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.basic_display {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    font-size: 1.8rem;
+    font-family: 'Comfortaa', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #3e3e3e;
+}
+
+.main_section {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 18fr) minmax(0, 82fr) ;
+    min-height: 100vh;
+}
+
+.main_section * {
+    /* border: solid 0.1rem #ccc; */
+}
+
+.right_section {
+    padding-left: 10rem;
+    max-width: 140rem;
+    border: none!important;
+}
+
+.left_section, .right_section {
+    height: 100%;
+    border: solid 0.1rem #cacaca;
+}
+
+.company_name_box, .profile_box {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 4rem;
+    gap: 2rem;
+}
+
+.comp_logo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
+    background-color: #3e3e3e;
+}
+
+.comp_name p {
+    font-size: 2.4rem;
+}
+
+.profile_pic {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: #fec33f;
+}
+
+.profile_info p {
+    font-size: 1.4rem;
+}
+
+.input_box {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.input_overview {
+    height: 5rem;
+    width: 50rem;
+    border: solid 0.1rem #333;
+    border-radius: 1.6rem;
+    padding: 3rem 3rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input_overview img {
+    width: 3rem;
+}
+
+.input_overview input {
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.main_title_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.load_file_btn {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.5rem 5rem;
+    border-radius: 0.8rem;
+    height: fit-content;
+    border: solid 0.1rem #4c4c4c;
+    outline: none;
+    font-size: 1rem;
+    color: #4c4c4c;
+    cursor: pointer;
+}
+
+.load_file_btn img {
+    width: 2.4rem;
+}
+
+.folder_item {
+    width: 28rem;
+    background-color: #ededed;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.folders_holder {
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    row-gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.files_holder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+}
+
+.file {
+    height: 22rem;
+    box-shadow: 0 0 1.6rem 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem 0;
+}
+
+.file_img {
+    width: 90%;
+    height: 18rem;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* flex-shrink: 0; */
+}
+
+.file_img img {
+    height: 100%;
+}
+
+.filename {
+    font-size: 1.4rem;
+}
+
+.menu_bar {
+    display: flex;
+    padding: 1rem 3rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu_item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.menu_item:hover {
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.menu_item p{
+    font-size: 1.4rem;
+}
+
