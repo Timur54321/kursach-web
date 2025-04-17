@@ -140,7 +140,7 @@
                 </div>
             </div>
             <div>
-                <h1 class="title">Все файлы</h1>
+                <h1 class="title" style="margin-bottom: 2rem;">Все файлы</h1>
                 <div class="files_holder">
                     <div class="file">
                         <div class="file_img">
@@ -150,25 +150,103 @@
                     </div>
                     <div class="file">
                         <div class="file_img">
-                            <img src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg" alt="">
+                            <img src="./data/akula.jpg" alt="">
                         </div>
                         <p class="filename">Great name for great file.jpg</p>
                     </div>
                     <div class="file">
                         <div class="file_img">
-                            <img src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg" alt="">
+                            <img src="./data/meta.jpg" alt="">
                         </div>
                         <p class="filename">Great name for great file.jpg</p>
                     </div>
                     <div class="file">
                         <div class="file_img">
-                            <img src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg" alt="">
+                            <img src="./data/shrek.jpg" alt="">
                         </div>
                         <p class="filename">Great name for great file.jpg</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="overlay">
+            <div class="black_overlay">
+                <div class="image_holder">
+                    <img src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg" alt="" style="height: 100%;" id="toshow">
+                </div>
+            </div>
+        </div>
+
+        <div id="upload_overlay" style="display: none;">
+            <div class="black_overlay">
+                <div class="upload_box">
+                    <div class="file_upload_box">
+                        <img src="./data/upload.png" alt="" style="transform: scale(0.8); margin-bottom: -4rem;">
+                        <p style="text-align: center;">Выберите файл для загрузки на платформу</p>
+                        <p style="text-align: center;">Принимаются файлы со следующими расширениями jpg, png, mp3, wav, mp4, pdf, zip и др.</p>
+                    </div>
+                    <div class="upload_info">
+                        <div>
+                            <p class="mb-1">Название файла</p>
+                            <input type="text" class="upload_input mb-1">
+                            <p class="mb-1">Выберите папку</p>
+                            <div class="upload_folder_box">
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                                <div class="folder_item mb-1" style="width: 100%;">
+                                    <div class="basic_display">
+                                        <img src="./data/folder.png" alt="" width="12rem">
+                                        <p style="font-size: 1.4rem;">Анапа 2012</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="upload_btn">Загрузить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
