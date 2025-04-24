@@ -15,4 +15,15 @@ $(document).ready(function() {
             $(this).hide(200);
         }
     });
+
+
+    $(".file_upload_box").click(function() {
+        $("#file_input").trigger("click");
+    });
+
+    const imageKey = 'RobloxScreenShot20250308_171846150.png';
+    const imageUrl = `/api/v1/files/${imageKey}`;
+
+    $("#myImage").attr("src", imageUrl);
+
 });

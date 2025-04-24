@@ -81,6 +81,7 @@ block content
                         .file_img
                             img(src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg", alt="")
                         p.filename Great name for great file.jpg
+                img(id="myImage" alt="Image from S3")
 
         #overlay
             .black_overlay
@@ -94,6 +95,7 @@ block content
                         img(src="./data/upload.png", alt="", style="transform: scale(0.8); margin-bottom: -4rem;")
                         p(style="text-align: center;") Выберите файл для загрузки на платформу
                         p(style="text-align: center;") Принимаются файлы со следующими расширениями jpg, png, mp3, wav, mp4, pdf, zip и др.
+                    input#file_input(style="display:none;" type="file")
                     .upload_info
                         div
                             p.mb-1 Название файла
