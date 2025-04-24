@@ -1,0 +1,111 @@
+extends base
+
+block links 
+    link(rel='stylesheet' href='/style/main.css')
+
+block content 
+    section.main_section
+        .left_section
+            .company_name_box
+                .comp_logo
+                    img(src="", alt="")
+                .comp_name
+                    p AllSafe
+    
+            .profile_box
+                .profile_pic
+                    img(src="", alt="")
+                .profile_info
+                    p(style="margin-bottom: 0.5rem;")= user.firstname
+                    p(style="color: #555;")= user.email
+    
+            .menu_bar
+                .menu_item
+                    div(style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;")
+                        img(src="./data/plus.png", alt="", width="100%")
+                    p Все файлы
+                .menu_item
+                    div(style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;")
+                        img(src="./data/plus.png", alt="", width="100%")
+                    p Все файлы
+                .menu_item
+                    div(style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;")
+                        img(src="./data/plus.png", alt="", width="100%")
+                    p Все файлы
+    
+            div(style="width: 80%; height: 0.1rem; background-color: #55555589; margin: auto; margin-bottom: 2rem;")
+    
+            .menu_bar
+                p Папки
+                .menu_item
+                    div(style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;")
+                        img(src="./data/folder.png", alt="", width="100%")
+                    p Все файлы
+                .menu_item
+                    div(style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;")
+                        img(src="./data/folder.png", alt="", width="100%")
+                    p Все файлы
+                .menu_item
+                    div(style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;")
+                        img(src="./data/folder.png", alt="", width="100%")
+                    p Все файлы
+
+        .right_section
+            .input_box
+                .input_overview
+                    img(src="./data/magnifier.png", alt="")
+                    input(type="text", placeholder="Найти...")
+            
+            .main_title_box
+                div
+                    p.title(style="margin-bottom: 1rem;") Доброе утро, Тимур!
+                    p.subtitle Мы рады, что вы снова тут
+                button.load_file_btn
+                    img(src="./data/plus.png", alt="")
+                    p Загрузить
+    
+            div(style="margin-bottom: 4rem;")
+                h1.title Папки
+                .folders_holder
+                    .folder_item
+                        .basic_display
+                            img(src="./data/folder.png", alt="", width="26rem")
+                            p(style="font-size: 1.4rem;") Анапа 2012
+                        .basic_display(style="justify-content: center; width: 2.4rem; cursor: pointer;")
+                            img(src="./data/threedots.png", alt="", width="100%")
+    
+            div
+                h1.title(style="margin-bottom: 2rem;") Все файлы
+                .files_holder
+                    .file
+                        .file_img
+                            img(src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg", alt="")
+                        p.filename Great name for great file.jpg
+
+        #overlay
+            .black_overlay
+                .image_holder
+                    img(src="./data/012bd8dfab0c2862cc585d8e561d7b91.jpg", alt="", style="height: 100%;", id="toshow")
+
+        #upload_overlay(style="display: none;")
+            .black_overlay
+                .upload_box
+                    .file_upload_box
+                        img(src="./data/upload.png", alt="", style="transform: scale(0.8); margin-bottom: -4rem;")
+                        p(style="text-align: center;") Выберите файл для загрузки на платформу
+                        p(style="text-align: center;") Принимаются файлы со следующими расширениями jpg, png, mp3, wav, mp4, pdf, zip и др.
+                    .upload_info
+                        div
+                            p.mb-1 Название файла
+                            input(type="text", class="upload_input mb-1")
+                            p.mb-1 Выберите папку
+                            .upload_folder_box
+                                .folder_item.mb-1(style="width: 100%;")
+                                    .basic_display
+                                        img(src="./data/folder.png", alt="", width="12rem")
+                                        p(style="font-size: 1.4rem;") Анапа 2012
+                        div
+                            button.upload_btn Загрузить
+
+block scripts
+    script(src="./js/index.js")
