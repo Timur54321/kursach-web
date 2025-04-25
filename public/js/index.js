@@ -16,9 +16,32 @@ $(document).ready(function() {
         }
     });
 
-
     $(".file_upload_box").click(function() {
         $("#file_input").trigger("click");
+    });
+
+    $("#file_input").on("change", async function() {
+        const file = $(this)[0].files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        try {
+            const response = await fetch('api/v1/files/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                alert('Файл успешно загружен! URL: ' + result.url);
+            } else {
+                alert('Ошибка при загрузке файла');
+                console.log(response);
+            }
+        } catch (err) {
+            console.log("Oshibka: ", err);
+        }
+        
     });
 
     const imageKey = 'RobloxScreenShot20250308_171846150.png';

@@ -9,14 +9,14 @@ CREATE TABLE app_user(
 
 CREATE TABLE mediafile (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL REFERENCES user (id) ON DELETE CASCADE,
-    folder_id INTEGER NOT NULL REFERENCES folder (id) ON DELETE CASCADE,
-    title VARCHAR(255) NOT NULL,
-    description TEXT,
-    file_path VARCHAR(512) NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES app_user (id) ON DELETE CASCADE,
+    -- folder_id INTEGER NOT NULL REFERENCES folder (id) ON DELETE CASCADE,
+    -- title VARCHAR(255) NOT NULL,
+    file_name VARCHAR(512) NOT NULL,
     file_size BIGINT NOT NULL,
-    file_type VARCHAR(100) NOT NULL,
+    file_key VARCHAR(100) NOT NULL,
     mime_type VARCHAR(100) NOT NULL,
+    bucket_name VARCHAR(50) NOT NULL,
     duration INTEGER, -- в секундах, для аудио/видео
     width INTEGER, -- для изображений/видео
     height INTEGER, -- для изображений/видео
