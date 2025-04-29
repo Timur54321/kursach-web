@@ -82,6 +82,7 @@ exports.login = async (req, res, next) => {
 }
 
 exports.protect = async (req, res, next) => {
+    console.log("got here!");
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer'))
     {

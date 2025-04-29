@@ -1,4 +1,33 @@
+const htmlFile = (fileName, imgUrl) => `
+        <div class="file">
+            <div class="file_img">
+                <img src="${imgUrl}" alt="">
+            </div>
+            <p class="filename">${fileName}</p>
+        </div>
+    `;
+
+const loadFiles = () => {
+    fetch('/api/v1/media/myfiles')
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        for (let i = 0; i < data.data.length; i++)
+        {
+            $("#files_holder").append(htmlFile(data.data[i].file_name, `/api/v1/files/${data.data.file_key}`));
+            console.log("hello world")
+        }
+    })
+    .catch(err => {
+        console.log("Ошибка: ", err);
+    });
+};
+
 $(document).ready(function() {
+
+    loadFiles();
+
     $(".file").click(function() {
         $("#toshow").attr("src", $(this).find("img").attr("src"));
         $("#overlay").show(200);
@@ -48,5 +77,7 @@ $(document).ready(function() {
     const imageUrl = `/api/v1/files/${imageKey}`;
 
     $("#myImage").attr("src", imageUrl);
+
+
 
 });

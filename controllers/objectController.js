@@ -5,6 +5,9 @@ const {v4: uuidv4} = require('uuid');
 const db = require('../db');
 dotenv.config({path: "./config.env"});
 
+// e9c6609404924b6bbc27fd23f3ac5852
+// 212a6ea697984881997941c1ae0f8785
+
 const s3 = new S3({
     credentials: {
         accessKeyId: process.env.S3ACCESS_KEY,

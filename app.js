@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRouter');
 const viewRouter = require('./routes/viewRoutes');
 const objectRouter = require('./routes/objectRouter');
+const mediaRouter = require('./routes/mediafileRoutes');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(cookieParser());
 app.use('/', viewRouter);
 app.use('/api/v1/files', objectRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/media', mediaRouter);
 
 module.exports = app;
 
